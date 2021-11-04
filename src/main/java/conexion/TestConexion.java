@@ -1,5 +1,6 @@
 package conexion;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class TestConexion {
@@ -10,7 +11,13 @@ public class TestConexion {
 			System.out.println(Conexion.getInstance());
 			System.out.println(Conexion.getInstance());
 			System.out.println(Conexion.getInstance());
-		} catch (SQLException e) {
+			System.out.println(ConexionRS.getConnection());
+			System.out.println(ConexionRS.getConnection());
+			System.out.println(ConexionRS.getConnection());
+			System.out.println(ConexionDS.getConnection());
+			System.out.println(ConexionDS.getConnection());
+			System.out.println(ConexionDS.getConnection());
+		} catch (SQLException | IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
