@@ -22,12 +22,12 @@ public class TestDao {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
-		try {
-			System.out.printf("Actualizado registro %B%n" , dao.actualizarPrecioProductoPorId(1, 1500));
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			System.out.printf("Actualizado registro %B%n" , dao.actualizarPrecioProductoPorId(1, 1500));
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 //		Producto nuevo = new Producto("mochila", 200);
 //		try {
 //			System.out.printf("Insertado nuevo registro %B%n" , dao.insertarNuevoProducto(nuevo));
@@ -35,6 +35,12 @@ public class TestDao {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
+		try {
+			System.out.printf("Rebajado precio de productos %B%n", dao.actualizarPrecioProductos(-10));
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

@@ -8,6 +8,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import java.sql.CallableStatement;
+
 import java.sql.Statement;
 
 import conexion.Conexion;
@@ -65,6 +67,15 @@ public class ProductosDAOSQL implements ProductosDAO {
 		sentencia.setFloat(2, nuevoProducto.getPrices());
 		int ejecucion = sentencia.executeUpdate();
 		return ejecucion != 0;
+	}
+
+	@Override
+	public boolean actualizarPrecioProductos(int porcentaje) throws SQLException {
+		// TODO Auto-generated method stub
+		CallableStatement stmt=conexion.prepareCall("{call actualizar(?)}"); 
+		stmt.setInt(1, porcentaje);
+		return stmt.executeUpdate() != 0 ;
+
 	}
 	
 	

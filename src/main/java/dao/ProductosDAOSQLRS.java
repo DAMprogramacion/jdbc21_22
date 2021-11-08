@@ -100,4 +100,10 @@ public class ProductosDAOSQLRS implements ProductosDAO {
 		return false;
 	}
 
+	@Override
+	public boolean actualizarPrecioProductos(int porcentaje) throws SQLException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

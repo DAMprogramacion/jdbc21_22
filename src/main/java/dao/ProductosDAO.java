@@ -9,5 +9,5 @@ public interface ProductosDAO {
 	boolean borrarProductoPorId(int id) throws SQLException;
 	boolean actualizarPrecioProductoPorId(int id, float nuevoPrecio) throws SQLException;
 	boolean insertarNuevoProducto(Producto nuevoProducto) throws SQLException;
-	
+	boolean actualizarPrecioProductos(int porcentaje) throws SQLException;
 }
